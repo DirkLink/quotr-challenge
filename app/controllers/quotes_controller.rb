@@ -3,6 +3,7 @@ class QuotesController < ApplicationController
   end
 
   def random
+    request.format=:json
     quote = {
       text:   Faker::Hacker.say_something_smart,
       author: Faker::Name.name
